@@ -1,0 +1,1399 @@
+:root {
+    /* Fusion Palette: Tanu's Organic Cream & Terracotta + Helados con Amor's Vibrant Berry, Pistachio & Mango */
+    --tanu-cream: #F6F6EC;
+    --tanu-terracotta: #B22902;
+    --strawberry: #D91E4E;
+    --strawberry-soft: #FFE4EC;
+    --pistachio: #4D9E2A;
+    --pistachio-soft: #E5F7DC;
+    --mango: #F59E0B;
+    --mango-soft: #FFF3D1;
+    --lavender: #8B5CF6;
+    --choco: #2A1612;
+    --choco-soft: #5C4038;
+    --font-amatic: 'Amatic SC', cursive;
+    --font-script: 'Pacifico', cursive;
+    --font-round: 'Fredoka', sans-serif;
+    --font-sans: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--tanu-cream);
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 194, 212, 0.3) 0%, transparent 32%),
+        radial-gradient(circle at 90% 35%, rgba(182, 238, 157, 0.3) 0%, transparent 30%),
+        radial-gradient(circle at 50% 80%, rgba(255, 223, 158, 0.28) 0%, transparent 38%);
+    color: var(--choco);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+/* Floating Animated Background Sprinkles */
+.floating-decorations {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.floater {
+    position: absolute;
+    font-size: 1.8rem;
+    opacity: 0.2;
+    animation: floatAround 9s ease-in-out infinite alternate;
+}
+
+.f-1 { top: 18%; left: 3%; animation-duration: 7s; }
+.f-2 { top: 32%; right: 4%; animation-duration: 8.5s; }
+.f-3 { top: 58%; left: 2%; animation-duration: 6.5s; }
+.f-4 { top: 74%; right: 3%; animation-duration: 9s; }
+.f-5 { top: 88%; left: 5%; animation-duration: 7.5s; }
+.f-6 { top: 45%; right: 2%; animation-duration: 8s; }
+
+@keyframes floatAround {
+    0% { transform: translateY(0px) rotate(-8deg) scale(1); }
+    50% { transform: translateY(-22px) rotate(10deg) scale(1.1); }
+    100% { transform: translateY(10px) rotate(-5deg) scale(0.95); }
+}
+
+/* Animated Marquee Top Bar */
+.marquee-bar {
+    background: linear-gradient(90deg, var(--tanu-terracotta), var(--strawberry), var(--pistachio), var(--tanu-terracotta));
+    background-size: 300% 100%;
+    animation: rainbowBg 16s linear infinite;
+    color: #fff;
+    padding: 9px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    position: relative;
+    z-index: 60;
+}
+
+@keyframes rainbowBg {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 300% 50%; }
+}
+
+.marquee-track {
+    display: inline-flex;
+    gap: 52px;
+    animation: scrollMarquee 28s linear infinite;
+}
+
+@keyframes scrollMarquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Sticky Navbar (Tanu clean links + Helados con Amor Logo Badge) */
+.navbar {
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+    padding: 0 14px;
+}
+
+.nav-pill-wrapper {
+    background: rgba(246, 246, 236, 0.95);
+    backdrop-filter: blur(14px);
+    border: 2.5px solid rgba(178, 41, 2, 0.2);
+    border-radius: 999px;
+    padding: 9px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 12px 30px rgba(42, 22, 18, 0.1);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.logo-bubble {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    padding: 3px;
+    background: conic-gradient(from 0deg, var(--tanu-terracotta), var(--strawberry), var(--mango), var(--pistachio), var(--tanu-terracotta));
+    box-shadow: 0 6px 18px rgba(178, 41, 2, 0.25);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.brand:hover .logo-bubble {
+    transform: scale(1.12) rotate(-6deg);
+}
+
+.brand-logo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.heart-sparkle {
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    font-size: 1.15rem;
+    animation: pulseBeat 1.5s infinite ease-in-out;
+}
+
+@keyframes pulseBeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.25) rotate(8deg); }
+}
+
+.brand-script {
+    font-family: var(--font-script);
+    font-size: 1.65rem;
+    color: var(--tanu-terracotta);
+    display: block;
+    line-height: 1.05;
+}
+
+.brand-tag {
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: var(--pistachio);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--choco);
+    font-weight: 700;
+    font-size: 0.84rem;
+    letter-spacing: 0.04em;
+    padding: 7px 13px;
+    border-radius: 999px;
+    transition: all 0.22s ease;
+}
+
+.nav-link:hover, .nav-link.active-link {
+    color: var(--tanu-terracotta);
+    background: rgba(178, 41, 2, 0.1);
+}
+
+.cart-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--tanu-terracotta);
+    color: #fff;
+    border: 2.5px solid #fff;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(178, 41, 2, 0.32);
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cart-trigger:hover {
+    transform: scale(1.06);
+    background: var(--strawberry);
+}
+
+.cart-count {
+    background: #FFE600;
+    color: var(--choco);
+    font-weight: 800;
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: 999px;
+}
+
+/* FULL-BLEED HERO BANNER (Tanu's "¿Qué sabor pedirás hoy?" + Helados con Amor Medallion) */
+.hero-banner {
+    position: relative;
+    min-height: 610px;
+    display: flex;
+    align-items: center;
+    padding: 64px 0 110px;
+    margin-top: -28px;
+    overflow: hidden;
+}
+
+.hero-bg-media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-bg-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.03);
+    animation: slowZoomHero 18s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoomHero {
+    0% { transform: scale(1.02); }
+    100% { transform: scale(1.1); }
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(95deg, rgba(34, 15, 12, 0.86) 0%, rgba(34, 15, 12, 0.64) 55%, rgba(34, 15, 12, 0.28) 100%);
+}
+
+.hero-banner-content {
+    position: relative;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 44px;
+    align-items: center;
+    padding-top: 28px;
+}
+
+.conscious-pill {
+    display: inline-block;
+    background: rgba(229, 247, 220, 0.95);
+    color: #215E0C;
+    font-weight: 800;
+    font-size: 0.82rem;
+    padding: 7px 16px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.hero-question-title {
+    font-family: var(--font-round);
+    font-size: clamp(2.6rem, 4.8vw, 4.2rem);
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 18px;
+    text-shadow: 0 4px 24px rgba(0,0,0,0.35);
+}
+
+.script-glow {
+    font-family: var(--font-script);
+    color: #FF85AD;
+    font-weight: 400;
+    display: inline-block;
+    transform: rotate(-2deg);
+}
+
+.hero-subcopy {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1.1rem;
+    font-weight: 500;
+    max-width: 600px;
+    margin-bottom: 28px;
+}
+
+.hero-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+/* Tanu Signature Terracotta CTA Button */
+.btn-tanu-primary {
+    background: linear-gradient(135deg, var(--tanu-terracotta), var(--strawberry));
+    color: #fff;
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 16px 28px;
+    border-radius: 14px;
+    border: 2.5px solid #fff;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 10px 26px rgba(178, 41, 2, 0.45);
+    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-tanu-primary:hover:not(:disabled) {
+    transform: scale(1.06) translateY(-3px);
+    background: #000;
+}
+
+.btn-tanu-primary:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.btn-tanu-outline {
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.96rem;
+    padding: 16px 24px;
+    border-radius: 14px;
+    border: 2px solid rgba(255,255,255,0.65);
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-tanu-outline:hover {
+    background: #fff;
+    color: var(--choco);
+}
+
+/* Dietary Legend Chips in Hero */
+.dietary-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.legend-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255, 255, 255, 0.94);
+    color: var(--choco);
+    padding: 6px 13px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+/* Hero Right: Floating Logo Spotlight */
+.hero-brand-spotlight {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.logo-showcase-circle {
+    width: 280px;
+    height: 280px;
+    background: #fff;
+    padding: 12px;
+    border-radius: 50%;
+    border: 5px dashed #FFB8D0;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+    animation: floatMedallion 4.5s ease-in-out infinite;
+    position: relative;
+}
+
+@keyframes floatMedallion {
+    0%, 100% { transform: translateY(0px) rotate(-4deg); }
+    50% { transform: translateY(-16px) rotate(4deg); }
+}
+
+.logo-showcase-circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo-ribbon-tag {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--tanu-terracotta);
+    color: #fff;
+    font-family: var(--font-round);
+    font-size: 0.86rem;
+    font-weight: 700;
+    white-space: nowrap;
+    padding: 7px 18px;
+    border-radius: 999px;
+    border: 2.5px solid #fff;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.wave-divider {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 4;
+}
+
+.wave-divider svg {
+    width: 100%;
+    height: 75px;
+}
+
+/* TYPOGRAPHY HEADINGS (Tanu's Amatic SC + Montserrat Bold) */
+.amatic-subtitle {
+    font-family: var(--font-amatic);
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--tanu-terracotta);
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 36px;
+}
+
+.section-title {
+    font-family: var(--font-round);
+    font-size: clamp(2.1rem, 3.6vw, 3rem);
+    color: var(--choco);
+    margin-bottom: 10px;
+}
+
+.section-desc {
+    color: var(--choco-soft);
+    font-weight: 600;
+}
+
+.script-pop {
+    font-family: var(--font-script);
+    color: var(--strawberry);
+    font-weight: 400;
+}
+
+/* CATALOG SECTION ("Los más pedidos") */
+.catalog-section {
+    padding: 50px 0 84px;
+    position: relative;
+    z-index: 5;
+}
+
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 44px;
+}
+
+.filter-btn {
+    background: #fff;
+    border: 2.5px solid rgba(178, 41, 2, 0.2);
+    color: var(--choco);
+    padding: 11px 22px;
+    border-radius: 999px;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 5px 0px rgba(178, 41, 2, 0.12);
+    transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.filter-btn:hover {
+    transform: translateY(-3px);
+    border-color: var(--tanu-terracotta);
+}
+
+.filter-btn.active {
+    background: var(--tanu-terracotta);
+    color: #fff;
+    border-color: #7A1B00;
+    box-shadow: 0 5px 0px #7A1B00;
+}
+
+/* Product Cards with Dietary Seals */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 36px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 28px;
+    padding: 14px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.theme-berry { border: 3.5px solid #FFB8D0; box-shadow: 0 12px 0px #FF85AD, 0 20px 36px rgba(0,0,0,0.07); }
+.theme-pistachio { border: 3.5px solid #B5E89B; box-shadow: 0 12px 0px #7CC954, 0 20px 36px rgba(0,0,0,0.07); }
+.theme-mango { border: 3.5px solid #FFD285; box-shadow: 0 12px 0px #F5A623, 0 20px 36px rgba(0,0,0,0.07); }
+.theme-lavender { border: 3.5px solid #D9BBFF; box-shadow: 0 12px 0px #A876EB, 0 20px 36px rgba(0,0,0,0.07); }
+
+.product-card:hover {
+    transform: translateY(-9px) rotate(-0.8deg);
+}
+
+.card-tape {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 100px;
+    height: 24px;
+    background: rgba(255, 228, 115, 0.78);
+    z-index: 6;
+}
+
+.product-img-box {
+    position: relative;
+    height: 280px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.product-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img-box img {
+    transform: scale(1.08);
+}
+
+.sticker-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #fff;
+    color: var(--choco);
+    font-weight: 800;
+    font-size: 0.78rem;
+    padding: 6px 13px;
+    border-radius: 999px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+}
+
+.zoom-pill {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: var(--tanu-terracotta);
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.product-info {
+    padding: 16px 8px 6px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.title-and-seals {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.product-title {
+    font-family: var(--font-round);
+    font-size: 1.32rem;
+    color: var(--choco);
+    line-height: 1.2;
+}
+
+/* Tanu Dietary Seal Icons */
+.dietary-seals {
+    display: flex;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.seal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.76rem;
+    padding: 3px 7px;
+    border-radius: 999px;
+    font-weight: 800;
+}
+
+.seal-vegan { background: #E5F7DC; color: #2D6A10; }
+.seal-gf { background: #FFF3D1; color: #945200; }
+.seal-lf { background: #E0F2FE; color: #0369A1; }
+.seal-sf { background: #F3E8FF; color: #6D28D9; }
+
+.product-desc {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--choco-soft);
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+.product-action-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--tanu-cream);
+    padding: 12px 16px;
+    border-radius: 18px;
+}
+
+.price-note {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--choco-soft);
+}
+
+.price-amount {
+    font-family: var(--font-round);
+    font-size: 1.45rem;
+    color: var(--tanu-terracotta);
+}
+
+.btn-order-pop {
+    background: var(--tanu-terracotta);
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: 0.84rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-order-pop:hover {
+    background: var(--strawberry);
+    transform: scale(1.06);
+}
+
+/* SECTION 2: TANU'S 3 PILLARS ("Súper alimentos", "Inclusiva", "Clásica") */
+.pillars-section {
+    padding: 70px 0;
+    background: #EFEFE2;
+    border-top: 3px dashed rgba(178, 41, 2, 0.18);
+    border-bottom: 3px dashed rgba(178, 41, 2, 0.18);
+    position: relative;
+    z-index: 5;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.pillar-card {
+    background: #fff;
+    border-radius: 28px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.pillar-card:hover {
+    transform: translateY(-8px);
+}
+
+.p-berry { border: 3.5px solid #FFB8D0; box-shadow: 0 12px 0px #FF85AD; }
+.p-green { border: 3.5px solid #B5E89B; box-shadow: 0 12px 0px #7CC954; }
+.p-mango { border: 3.5px solid #FFD285; box-shadow: 0 12px 0px #F5A623; }
+
+.pillar-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--tanu-terracotta);
+    background: #FFE4EC;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+}
+
+.pillar-header h3 {
+    font-family: var(--font-round);
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    color: var(--choco);
+}
+
+.pillar-header p {
+    font-size: 0.92rem;
+    color: var(--choco-soft);
+    font-weight: 500;
+}
+
+.pillar-img-wrap {
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.pillar-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+.pillar-card:hover .pillar-img-wrap img {
+    transform: scale(1.07);
+}
+
+/* MOVING PHOTO VITRINA STRIP */
+.vitrina-strip {
+    padding: 64px 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+}
+
+.vitrina-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.vitrina-header h2 {
+    font-family: var(--font-round);
+    font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+    color: var(--choco);
+}
+
+.photo-marquee {
+    width: 100%;
+    overflow: hidden;
+    padding: 16px 0;
+}
+
+.photo-track {
+    display: flex;
+    gap: 26px;
+    width: max-content;
+    animation: slidePhotos 32s linear infinite;
+}
+
+.photo-marquee:hover .photo-track {
+    animation-play-state: paused;
+}
+
+@keyframes slidePhotos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.mini-polaroid {
+    width: 255px;
+    background: #fff;
+    padding: 12px 12px 16px;
+    border-radius: 22px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+    border: 3px solid #FFD1DF;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.mini-polaroid:nth-child(odd) { transform: rotate(-2deg); }
+.mini-polaroid:nth-child(even) { transform: rotate(2deg); }
+
+.mini-polaroid:hover {
+    transform: scale(1.08) rotate(0deg);
+    border-color: var(--tanu-terracotta);
+}
+
+.mini-polaroid img {
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 10px;
+}
+
+.mini-polaroid span {
+    font-family: var(--font-round);
+    font-weight: 700;
+    font-size: 0.92rem;
+}
+
+/* CUSTOM 1-LITER COMPOSTABLE PINT BUILDER */
+.builder-section {
+    padding: 40px 0 80px;
+    position: relative;
+    z-index: 5;
+}
+
+.builder-card {
+    background: #fff;
+    border: 4px solid var(--tanu-terracotta);
+    border-radius: 36px;
+    padding: 42px;
+    box-shadow: 0 16px 0px var(--tanu-terracotta), 0 28px 60px rgba(0,0,0,0.12);
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 42px;
+    align-items: center;
+}
+
+.builder-desc {
+    font-size: 0.98rem;
+    color: var(--choco-soft);
+    margin-bottom: 22px;
+}
+
+.tub-visualizer {
+    background: var(--tanu-cream);
+    border: 2.5px dashed var(--tanu-terracotta);
+    border-radius: 22px;
+    padding: 18px;
+    margin-bottom: 24px;
+}
+
+.tub-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+    font-size: 0.92rem;
+    margin-bottom: 12px;
+}
+
+.tub-header strong {
+    color: var(--tanu-terracotta);
+}
+
+.selected-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-height: 40px;
+    align-items: center;
+}
+
+.empty-pill-hint {
+    font-size: 0.86rem;
+    color: var(--choco-soft);
+    font-weight: 600;
+}
+
+.selected-pill {
+    background: var(--tanu-terracotta);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.82rem;
+    padding: 7px 14px;
+    border-radius: 999px;
+}
+
+.builder-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.builder-price-box span {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--choco-soft);
+}
+
+.builder-price-box strong {
+    font-family: var(--font-round);
+    font-size: 1.9rem;
+    color: var(--tanu-terracotta);
+}
+
+.board-title {
+    font-family: var(--font-round);
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+}
+
+.flavor-chips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.flavor-chip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    background: var(--chip-bg, #fff);
+    border: 2px solid var(--chip-border, #ccc);
+    border-radius: 18px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+    font-family: var(--font-sans);
+}
+
+.flavor-chip strong {
+    display: block;
+    font-size: 0.86rem;
+    color: var(--choco);
+}
+
+.flavor-chip small {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--choco-soft);
+}
+
+.flavor-chip:hover {
+    transform: translateY(-2px);
+}
+
+.flavor-chip.selected {
+    background: var(--tanu-terracotta) !important;
+    border-color: #7A1B00 !important;
+    color: #fff;
+}
+
+.flavor-chip.selected strong,
+.flavor-chip.selected small {
+    color: #fff;
+}
+
+.scoop-emoji {
+    font-size: 1.4rem;
+}
+
+/* SHOPS & STORY BANNER */
+.shops-section {
+    padding: 20px 0 84px;
+    position: relative;
+    z-index: 5;
+}
+
+.heart-story-banner {
+    background: #fff;
+    border: 3.5px solid #FFB8D0;
+    border-radius: 32px;
+    padding: 34px;
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 32px;
+    align-items: center;
+    margin-bottom: 40px;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.06);
+}
+
+.heart-logo-spot img {
+    width: 100%;
+    border-radius: 50%;
+    border: 4px solid var(--tanu-terracotta);
+}
+
+.heart-story-text h2 {
+    font-family: var(--font-round);
+    font-size: clamp(1.7rem, 2.8vw, 2.3rem);
+    margin-bottom: 10px;
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.shop-card {
+    background: #fff;
+    padding: 26px;
+    border-radius: 26px;
+}
+
+.shop-pink { border: 3.5px solid #FFB8D0; box-shadow: 0 10px 0px #FF85AD; }
+.shop-green { border: 3.5px solid #B5E89B; box-shadow: 0 10px 0px #7CC954; }
+.shop-mango { border: 3.5px solid #FFD285; box-shadow: 0 10px 0px #F5A623; }
+
+.shop-sticker {
+    display: inline-block;
+    background: var(--tanu-cream);
+    font-weight: 800;
+    font-size: 0.75rem;
+    color: var(--tanu-terracotta);
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+}
+
+.shop-card h3 {
+    font-family: var(--font-round);
+    font-size: 1.45rem;
+    margin-bottom: 8px;
+}
+
+.shop-card p {
+    font-size: 0.9rem;
+    color: var(--choco-soft);
+    margin-bottom: 5px;
+}
+
+.shop-perks {
+    margin-top: 12px;
+    padding: 10px 12px;
+    background: var(--tanu-cream);
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.82rem;
+}
+
+/* FOOTER (Inspired by Tanu's 4-Column Warm Cream Footer) */
+.footer {
+    background: #EAEAD8;
+    color: var(--choco);
+    padding: 60px 0;
+    border-top: 5px solid var(--tanu-terracotta);
+}
+
+.footer-grid-tanu {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+    gap: 32px;
+}
+
+.footer-logo {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--tanu-terracotta);
+    margin-bottom: 10px;
+}
+
+.brand-script-footer {
+    font-family: var(--font-script);
+    font-size: 1.7rem;
+    color: var(--tanu-terracotta);
+}
+
+.footer-col h5 {
+    font-family: var(--font-round);
+    font-size: 1.15rem;
+    margin-bottom: 14px;
+    color: var(--tanu-terracotta);
+}
+
+.footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.footer-col a {
+    color: var(--choco);
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    color: var(--tanu-terracotta);
+}
+
+.whatsapp-pill {
+    display: inline-block;
+    background: var(--tanu-terracotta);
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.86rem;
+    padding: 10px 18px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+}
+
+/* LIGHTBOX & CART DRAWER */
+.lightbox-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(34, 15, 12, 0.88);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 300;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    padding: 24px;
+}
+
+.lightbox-modal.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 820px;
+    width: 100%;
+    background: #fff;
+    padding: 16px 16px 22px;
+    border-radius: 28px;
+    text-align: center;
+}
+
+.lightbox-content img {
+    width: 100%;
+    max-height: 72vh;
+    object-fit: contain;
+    border-radius: 18px;
+}
+
+.lightbox-caption {
+    font-family: var(--font-amatic);
+    color: var(--tanu-terracotta);
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--tanu-terracotta);
+    border: 3px solid #fff;
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.cart-drawer {
+    position: fixed;
+    top: 0;
+    right: -430px;
+    width: 100%;
+    max-width: 410px;
+    height: 100vh;
+    background: var(--tanu-cream);
+    z-index: 250;
+    border-left: 4px solid var(--tanu-terracotta);
+    box-shadow: -14px 0 40px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    transition: right 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cart-drawer.open {
+    right: 0;
+}
+
+.cart-drawer-header {
+    padding: 20px 24px;
+    background: #fff;
+    border-bottom: 2px solid rgba(178, 41, 2, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drawer-title-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-round);
+    color: var(--tanu-terracotta);
+}
+
+.drawer-mini-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.drawer-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--tanu-terracotta);
+}
+
+.cart-items-container {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    padding: 12px;
+    border-radius: 18px;
+}
+
+.cart-item img {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item-title {
+    font-weight: 700;
+    font-size: 0.88rem;
+}
+
+.cart-item-price {
+    color: var(--tanu-terracotta);
+    font-weight: 800;
+}
+
+.cart-item-remove {
+    background: #FFE4EC;
+    border: none;
+    color: var(--tanu-terracotta);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.cart-drawer-footer {
+    padding: 20px;
+    background: #fff;
+    border-top: 2px solid rgba(178, 41, 2, 0.15);
+}
+
+.cart-total-row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+    font-size: 1.15rem;
+    margin-bottom: 14px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.toast {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%) translateY(90px);
+    background: var(--tanu-terracotta);
+    color: #fff;
+    border: 2.5px solid #fff;
+    padding: 13px 26px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 0.92rem;
+    z-index: 400;
+    opacity: 0;
+    transition: all 0.32s ease;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+@media (max-width: 980px) {
+    .hero-banner-content,
+    .pillars-grid,
+    .builder-card,
+    .heart-story-banner,
+    .locations-grid,
+    .footer-grid-tanu {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .flavor-chips-grid,
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
