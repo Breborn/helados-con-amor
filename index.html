@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helados con Amor | Heladería Artesanal &amp; Consciente</title>
+    <meta name="description" content="Helados con Amor: Elaboramos helados artesanales y naturales con nuestras propias recetas. Opciones veganas, sin gluten, sin lactosa y clásicos hechos con amor.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Fredoka:wght@500;600;700&family=Montserrat:wght@500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Subtle Floating Artisan Elements -->
+    <div class="floating-decorations" aria-hidden="true">
+        <span class="floater f-1">🍓</span>
+        <span class="floater f-2">🌱</span>
+        <span class="floater f-3">🍦</span>
+        <span class="floater f-4">💖</span>
+        <span class="floater f-5">🥜</span>
+        <span class="floater f-6">🥭</span>
+    </div>
+
+    <!-- Animated Marquee Ribbon -->
+    <div class="marquee-bar">
+        <div class="marquee-track">
+            <span>🌱 HELADERÍA ARTESANAL &amp; CONSCIENTE • SIN BASES NI PREMEZCLAS INDUSTRIALES</span>
+            <span>🍓 OPCIONES VEGANAS, SIN LACTOSA, SIN GLUTEN Y SIN AZÚCAR</span>
+            <span>💖 ELABORADOS DESDE CERO CADA MAÑANA CON FRUTA FRESCA DE ESTACIÓN</span>
+            <span>🛵 ENVÍO GRATIS EN ENVASES COMPOSTABLES LLEVANDO 2 POTES DE LITRO</span>
+            <span>🌱 HELADERÍA ARTESANAL &amp; CONSCIENTE • SIN BASES NI PREMEZCLAS INDUSTRIALES</span>
+            <span>🍓 OPCIONES VEGANAS, SIN LACTOSA, SIN GLUTEN Y SIN AZÚCAR</span>
+        </div>
+    </div>
+
+    <!-- Header Inspired by Tanu + Helados con Amor Playful Pill -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-pill-wrapper">
+            <a href="#" class="brand">
+                <div class="logo-bubble">
+                    <img src="assets/img/logo.jpg" alt="Logo Helados con Amor" class="brand-logo">
+                    <span class="heart-sparkle">💖</span>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-script">Helados con amor</span>
+                    <span class="brand-tag">🌱 Heladería Artesanal &amp; Consciente</span>
+                </div>
+            </a>
+
+            <nav class="nav-links" aria-label="Navegación principal">
+                <a href="#mas-pedidos" class="nav-link active-link">INICIO</a>
+                <a href="#mas-pedidos" class="nav-link">LOS MÁS PEDIDOS</a>
+                <a href="#linea-vegan" class="nav-link">VEGAN &amp; CONSCIENTE 🌱</a>
+                <a href="#pilares" class="nav-link">FILOSOFÍA</a>
+                <a href="#armar-pote" class="nav-link">ARMÁ TU POTE</a>
+                <a href="#locales" class="nav-link">LOCALES</a>
+            </nav>
+
+            <button class="cart-trigger" id="cartTrigger" aria-label="Ver pedido">
+                <span class="cart-wobble">🍨</span>
+                <span class="cart-label">Hacer Pedido</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Full-Width Immersive Hero Banner ("¿Qué sabor pedirás hoy?" + Brand Logo Showcase) -->
+        <section class="hero-banner">
+            <div class="hero-bg-media">
+                <img src="assets/img/hero.jpg" alt="Cucuruchos artesanales de Helados con Amor con frutas frescas, pistachos y chocolate">
+                <div class="hero-overlay"></div>
+            </div>
+
+            <div class="container hero-banner-content">
+                <div class="hero-text-box">
+                    <div class="conscious-pill">
+                        <span>🌱 Recetas propias desde cero • Fruta real • Sin conservantes</span>
+                    </div>
+
+                    <h1 class="hero-question-title">
+                        ¿Qué sabor pedirás <span class="script-glow">hoy con amor?</span>
+                    </h1>
+
+                    <p class="hero-subcopy">
+                        Elaboramos helados artesanales, coloridos y naturales con nuestras propias pastas de frutos secos y frutas recién cosechadas. <strong>Tenemos opciones para todos: cremas clásicas, veganos 🌱, sin lactosa 🥛🚫 y sin gluten 🌾🚫.</strong>
+                    </p>
+
+                    <div class="hero-cta-row">
+                        <a href="#mas-pedidos" class="btn-tanu-primary">
+                            HACER UN PEDIDO AHORA 🍦
+                        </a>
+                        <a href="#armar-pote" class="btn-tanu-outline">
+                            Armar Pote de Litro a Medida
+                        </a>
+                    </div>
+
+                    <!-- Dietary Legend Bar (Tanu Signature Feature) -->
+                    <div class="dietary-legend">
+                        <div class="legend-chip">
+                            <span class="seal seal-vegan">🌱</span>
+                            <span>Opción Vegana</span>
+                        </div>
+                        <div class="legend-chip">
+                            <span class="seal seal-gf">🌾🚫</span>
+                            <span>Sin Gluten (Sin TACC)</span>
+                        </div>
+                        <div class="legend-chip">
+                            <span class="seal seal-lf">🥛🚫</span>
+                            <span>Sin Lactosa</span>
+                        </div>
+                        <div class="legend-chip">
+                            <span class="seal seal-sf">🍃</span>
+                            <span>Endulzado con Stevia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Giant Brand Logo Medallion + Polaroid Accent -->
+                <div class="hero-brand-spotlight">
+                    <div class="medallion-glow"></div>
+                    <div class="logo-showcase-circle">
+                        <img src="assets/img/logo.jpg" alt="Logo Oficial Helados con Amor">
+                        <div class="logo-ribbon-tag">✨ Hecho a Mano con Amor ✨</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Organic Wave Bottom -->
+            <div class="wave-divider">
+                <svg viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                    <path d="M0,35 C240,95 480,0 720,45 C960,90 1200,15 1440,55 L1440,90 L0,90 Z" fill="#F6F6EC"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- SECTION 1: "Los más pedidos" (Tanu structure + Colorful Artisan Cards + Dietary Filters) -->
+        <section class="catalog-section" id="mas-pedidos">
+            <div class="container">
+                <div class="section-header">
+                    <span class="amatic-subtitle">Recién salidos de nuestra cocina artesanal</span>
+                    <h2 class="section-title">Los más pedidos ❤️</h2>
+                    <p class="section-desc">
+                        Filtrá según tu antojo o necesidad alimentaria. Tocá cualquier foto para ver la textura bien de cerca.
+                    </p>
+                </div>
+
+                <!-- Interactive Filter Tabs (Category + Conscious Dietary Filters) -->
+                <div class="filter-tabs" role="tablist">
+                    <button class="filter-btn active" data-filter="todos">🌈 Ver Todos</button>
+                    <button class="filter-btn" data-filter="vegano">🌱 Veganos &amp; Sin Lactosa</button>
+                    <button class="filter-btn" data-filter="singluten">🌾🚫 Libres de Gluten</button>
+                    <button class="filter-btn" data-filter="cremas">🍫 Clásicos &amp; Cremas</button>
+                    <button class="filter-btn" data-filter="paletas">🍭 Paletas &amp; Potes</button>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid" id="productsGrid">
+                    <!-- Product 1 -->
+                    <article class="product-card theme-pistachio" data-category="vegano singluten cremas">
+                        <div class="card-tape"></div>
+                        <div class="product-img-box" data-lightbox="assets/img/pistacho-chocolate.jpg" data-title="Chocolate 85% Cacao & Pistacho Puro">
+                            <img src="assets/img/pistacho-chocolate.jpg" alt="Helado de Chocolate 85% Cacao y Pistacho Siciliano">
+                            <span class="sticker-badge">🔥 Top #1 Ventas</span>
+                            <button class="zoom-pill">🔍 Ver foto</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="title-and-seals">
+                                <h3 class="product-title">Chocolate 85% Cacao &amp; Pistacho</h3>
+                                <div class="dietary-seals" title="Vegano, Sin Gluten, Sin Lactosa">
+                                    <span class="seal seal-vegan" title="100% Vegano">🌱</span>
+                                    <span class="seal seal-gf" title="Sin Gluten">🌾🚫</span>
+                                    <span class="seal seal-lf" title="Sin Lactosa">🥛🚫</span>
+                                </div>
+                            </div>
+                            <p class="product-desc">
+                                Elaborado con cacao puro al 85%, fibra vegetal y pasta de pistachos tostados por nosotros. Sin lecitina de soya, sin lactosa ni gluten, con toda la cremosidad artesanal.
+                            </p>
+                            <div class="product-action-row">
+                                <div class="price-tag">
+                                    <span class="price-note">Pote Medio Litro / Capelina</span>
+                                    <strong class="price-amount">$5.400</strong>
+                                </div>
+                                <button class="btn-order-pop" data-name="Chocolate 85% Cacao & Pistacho (Vegan)" data-price="5400" data-img="assets/img/pistacho-chocolate.jpg">
+                                    Ver / Pedir →
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article class="product-card theme-berry" data-category="singluten cremas">
+                        <div class="card-tape"></div>
+                        <div class="product-img-box" data-lightbox="assets/img/frutos-rojos.jpg" data-title="Yoghurt Natural & Cheesecake de Frutos Silvestres">
+                            <img src="assets/img/frutos-rojos.jpg" alt="Helado de Yoghurt y Cheesecake con mermelada de mora y frambuesa">
+                            <span class="sticker-badge">🍓 Mermelada Propia</span>
+                            <button class="zoom-pill">🔍 Ver foto</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="title-and-seals">
+                                <h3 class="product-title">Yoghurt &amp; Frutos de la Patagonia</h3>
+                                <div class="dietary-seals">
+                                    <span class="seal seal-gf" title="Sin Gluten">🌾🚫</span>
+                                    <span class="seal seal-sf" title="Opción con Stevia">🍃</span>
+                                </div>
+                            </div>
+                            <p class="product-desc">
+                                Crema fresca de yoghurt natural y mascarpone bañada con mermelada de mora, calafate y frambuesas orgánicas cocinada a fuego lento en nuestra heladería.
+                            </p>
+                            <div class="product-action-row">
+                                <div class="price-tag">
+                                    <span class="price-note">Bowl Degustación / ½ Litro</span>
+                                    <strong class="price-amount">$4.800</strong>
+                                </div>
+                                <button class="btn-order-pop" data-name="Yoghurt & Frutos de la Patagonia" data-price="4800" data-img="assets/img/frutos-rojos.jpg">
+                                    Ver / Pedir →
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article class="product-card theme-mango" data-category="vegano singluten cremas">
+                        <div class="card-tape"></div>
+                        <div class="product-img-box" data-lightbox="assets/img/dulce-leche-mango.jpg" data-title="Lúcuma & Maracuyá con Dulce de Leche Artesanal">
+                            <img src="assets/img/dulce-leche-mango.jpg" alt="Helado de Lúcuma, Maracuyá y Dulce de Leche">
+                            <span class="sticker-badge">🥭 Súper Fruta Real</span>
+                            <button class="zoom-pill">🔍 Ver foto</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="title-and-seals">
+                                <h3 class="product-title">Maracuyá, Lúcuma &amp; Dulce de Leche</h3>
+                                <div class="dietary-seals">
+                                    <span class="seal seal-vegan" title="Opción Vegana disponible">🌱</span>
+                                    <span class="seal seal-gf" title="Sin Gluten">🌾🚫</span>
+                                </div>
+                            </div>
+                            <p class="product-desc">
+                                Dúo vibrante de maracuyá 100% fruta natural con semillas reales junto a nuestra crema de lúcuma y dulce de leche casero veteado a espátula.
+                            </p>
+                            <div class="product-action-row">
+                                <div class="price-tag">
+                                    <span class="price-note">Copa 2 Bochas / ½ Litro</span>
+                                    <strong class="price-amount">$4.600</strong>
+                                </div>
+                                <button class="btn-order-pop" data-name="Maracuyá, Lúcuma & Dulce de Leche" data-price="4600" data-img="assets/img/dulce-leche-mango.jpg">
+                                    Ver / Pedir →
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 4 -->
+                    <article class="product-card theme-lavender" data-category="singluten cremas">
+                        <div class="card-tape"></div>
+                        <div class="product-img-box" data-lightbox="assets/img/vainilla-lavanda.jpg" data-title="Vainilla de Madagascar & Lavanda con Miel Orgánica">
+                            <img src="assets/img/vainilla-lavanda.jpg" alt="Cucurucho de Vainilla y Lavanda con miel">
+                            <span class="sticker-badge">🌸 Botánico &amp; Puro</span>
+                            <button class="zoom-pill">🔍 Ver foto</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="title-and-seals">
+                                <h3 class="product-title">Vainilla en Chaucha &amp; Lavanda</h3>
+                                <div class="dietary-seals">
+                                    <span class="seal seal-gf" title="Sin Gluten en vaso">🌾🚫</span>
+                                </div>
+                            </div>
+                            <p class="product-desc">
+                                Infusión botánica de flores de lavanda agroecológica y chaucha de vainilla real en barquillo artesanal crocante, coronado con trozo de panal de miel pura.
+                            </p>
+                            <div class="product-action-row">
+                                <div class="price-tag">
+                                    <span class="price-note">Cono Barquillo Especial</span>
+                                    <strong class="price-amount">$5.100</strong>
+                                </div>
+                                <button class="btn-order-pop" data-name="Vainilla en Chaucha & Lavanda" data-price="5100" data-img="assets/img/vainilla-lavanda.jpg">
+                                    Ver / Pedir →
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 5 -->
+                    <article class="product-card theme-berry" data-category="vegano singluten paletas">
+                        <div class="card-tape"></div>
+                        <div class="product-img-box" data-lightbox="assets/img/paletas.jpg" data-title="Paletas Conscientes Bañadas en Cacao (Pack x4)">
+                            <img src="assets/img/paletas.jpg" alt="Paletas heladas artesanales con cacao y frutos secos">
+                            <span class="sticker-badge">🌱 100% Plant-Based</span>
+                            <button class="zoom-pill">🔍 Ver foto</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="title-and-seals">
+                                <h3 class="product-title">Paletas de Autor Sin Alérgenos (x4)</h3>
+                                <div class="dietary-seals">
+                                    <span class="seal seal-vegan" title="Vegano">🌱</span>
+                                    <span class="seal seal-gf" title="Sin Gluten">🌾🚫</span>
+                                    <span class="seal seal-lf" title="Sin Lactosa">🥛🚫</span>
+                                </div>
+                            </div>
+                            <p class="product-desc">
+                                Pack de 4 paletas artesanales: Limón-Menta-Jengibre, Maqui &amp; Frambuesa al Cacao 85%, Mango al Coco y Chocolate Sin Azúcar con pistachos tostados.
+                            </p>
+                            <div class="product-action-row">
+                                <div class="price-tag">
+                                    <span class="price-note">Caja Compostable x 4 Unid.</span>
+                                    <strong class="price-amount">$12.500</strong>
+                                </div>
+                                <button class="btn-order-pop" data-name="Pack x4 Paletas Conscientes" data-price="12500" data-img="assets/img/paletas.jpg">
+                                    Ver / Pedir →
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 6 -->
+                    <article class="product-card theme-pistachio" data-category="vegano singluten paletas">
+                        <div class="card-tape"></div>
+                        <div class="product-img-box" data-lightbox="assets/img/potes.jpg" data-title="Potes de Litro Compostables 'Amor Consciente'">
+                            <img src="assets/img/potes.jpg" alt="Tres potes artesanales compostables de helado">
+                            <span class="sticker-badge">♻️ Potes Compostables</span>
+                            <button class="zoom-pill">🔍 Ver foto</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="title-and-seals">
+                                <h3 class="product-title">Trío de Potes "Amor Consciente"</h3>
+                                <div class="dietary-seals">
+                                    <span class="seal seal-vegan" title="Opciones Veganas">🌱</span>
+                                    <span class="seal seal-gf" title="Sin Gluten">🌾🚫</span>
+                                    <span class="seal seal-lf" title="Sin Lactosa">🥛🚫</span>
+                                </div>
+                            </div>
+                            <p class="product-desc">
+                                Tres potes ecológicos de ½ Litro (1.5 L total) para combinar sabores clásicos, veganos o endulzados con stevia. Incluye 6 conos barquillo artesanales.
+                            </p>
+                            <div class="product-action-row">
+                                <div class="price-tag">
+                                    <span class="price-note">Pack Familiar 3 Potes Eco</span>
+                                    <strong class="price-amount">$24.900</strong>
+                                </div>
+                                <button class="btn-order-pop" data-name="Trío de Potes Amor Consciente" data-price="24900" data-img="assets/img/potes.jpg">
+                                    Ver / Pedir →
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: TANU'S SIGNATURE 3 PILLARS ("Súper alimentos", "Inclusiva", "Clásica") -->
+        <section class="pillars-section" id="pilares">
+            <div class="container">
+                <div class="section-header">
+                    <span class="amatic-subtitle">Con amor por tu cuerpo y por la tierra</span>
+                    <h2 class="section-title">Nuestra Filosofía Heladera 🌱💖</h2>
+                </div>
+
+                <div class="pillars-grid">
+                    <!-- Pillar 1: Súper alimentos -->
+                    <div class="pillar-card p-berry">
+                        <div class="pillar-header">
+                            <span class="pillar-badge">01 • Origen Natural</span>
+                            <h3>Súper Alimentos</h3>
+                            <p>
+                                Nos inspiramos en la riqueza de nuestra tierra y de los pueblos originarios: usamos frutos antioxidantes de la Patagonia (frambuesa, arándano, maqui y calafate), miel pura de panal y cacao al 85%.
+                            </p>
+                        </div>
+                        <div class="pillar-img-wrap" data-lightbox="assets/img/frutos-rojos.jpg" data-title="Súper Alimentos: Frutos antioxidantes reales">
+                            <img src="assets/img/frutos-rojos.jpg" alt="Súper alimentos en nuestros helados">
+                        </div>
+                    </div>
+
+                    <!-- Pillar 2: Inclusiva -->
+                    <div class="pillar-card p-green" id="linea-vegan">
+                        <div class="pillar-header">
+                            <span class="pillar-badge">02 • Para Todos</span>
+                            <h3>Inclusiva &amp; Vegan 🌱</h3>
+                            <p>
+                                ¡Nadie se queda sin helado! Desarrollamos recetas increíblemente cremosas <strong>veganas, sin lactosa, sin huevo, sin soya, sin gluten y opciones sin azúcar con stevia</strong> para que todos disfruten con tranquilidad.
+                            </p>
+                        </div>
+                        <div class="pillar-img-wrap" data-lightbox="assets/img/paletas.jpg" data-title="Heladería Inclusiva: Vegana, Sin Lactosa y Sin Gluten">
+                            <img src="assets/img/paletas.jpg" alt="Opciones veganas y sin alérgenos">
+                        </div>
+                    </div>
+
+                    <!-- Pillar 3: Clásica -->
+                    <div class="pillar-card p-mango">
+                        <div class="pillar-header">
+                            <span class="pillar-badge">03 • Maestría Italiana</span>
+                            <h3>Clásica &amp; Saludable</h3>
+                            <p>
+                                Tomamos la tradicional receta del <em>gelato</em> artesanal y la actualizamos con ingredientes limpios, agua purificada y menos azúcar para lograr un helado más ligero, intenso y nutritivo.
+                            </p>
+                        </div>
+                        <div class="pillar-img-wrap" data-lightbox="assets/img/hero.jpg" data-title="Receta Clásica actualizada y saludable">
+                            <img src="assets/img/hero.jpg" alt="Gelato clásico artesanal en cucurucho">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Moving Photo Strip / Vitrina Consciente -->
+        <section class="vitrina-strip">
+            <div class="vitrina-header container">
+                <span class="amatic-subtitle">La mayoría de nuestros helados son vegan 🌱</span>
+                <h2>✨ Espiá nuestras texturas en movimiento ✨</h2>
+            </div>
+            <div class="photo-marquee">
+                <div class="photo-track">
+                    <div class="mini-polaroid" data-lightbox="assets/img/hero.jpg" data-title="Barquillos Artesanales Veganos">
+                        <img src="assets/img/hero.jpg" alt="Cucuruchos">
+                        <span>🍦 Barquillos Artesanales</span>
+                    </div>
+                    <div class="mini-polaroid" data-lightbox="assets/img/frutos-rojos.jpg" data-title="Antioxidantes de la Patagonia">
+                        <img src="assets/img/frutos-rojos.jpg" alt="Frutos Rojos">
+                        <span>🍓 Súper Frutos Rojos</span>
+                    </div>
+                    <div class="mini-polaroid" data-lightbox="assets/img/pistacho-chocolate.jpg" data-title="Chocolate 85% Cacao Vegan">
+                        <img src="assets/img/pistacho-chocolate.jpg" alt="Pistacho">
+                        <span>🌱 Choc. 85% &amp; Pistacho</span>
+                    </div>
+                    <div class="mini-polaroid" data-lightbox="assets/img/paletas.jpg" data-title="Paletas Sin Lactosa ni Gluten">
+                        <img src="assets/img/paletas.jpg" alt="Paletas">
+                        <span>🍭 Sin Gluten ni Lactosa</span>
+                    </div>
+                    <div class="mini-polaroid" data-lightbox="assets/img/dulce-leche-mango.jpg" data-title="Lúcuma, Mango y Dulce de Leche">
+                        <img src="assets/img/dulce-leche-mango.jpg" alt="Dulce de leche">
+                        <span>🥭 Maracuyá &amp; Lúcuma</span>
+                    </div>
+                    <div class="mini-polaroid" data-lightbox="assets/img/vainilla-lavanda.jpg" data-title="Vainilla y Miel de Lavanda">
+                        <img src="assets/img/vainilla-lavanda.jpg" alt="Lavanda">
+                        <span>🌸 Botánicos &amp; Panal</span>
+                    </div>
+                    <div class="mini-polaroid" data-lightbox="assets/img/potes.jpg" data-title="Envases 100% Compostables">
+                        <img src="assets/img/potes.jpg" alt="Potes">
+                        <span>♻️ Potes Compostables</span>
+                    </div>
+                    <!-- Duplicated for seamless loop -->
+                    <div class="mini-polaroid" data-lightbox="assets/img/hero.jpg" data-title="Barquillos Artesanales Veganos">
+                        <img src="assets/img/hero.jpg" alt="Cucuruchos">
+                        <span>🍦 Barquillos Artesanales</span>
+                    </div>
+                    <div class="mini-polaroid" data-lightbox="assets/img/frutos-rojos.jpg" data-title="Antioxidantes de la Patagonia">
+                        <img src="assets/img/frutos-rojos.jpg" alt="Frutos Rojos">
+                        <span>🍓 Súper Frutos Rojos</span>
+                    </div>
+                    <div class="mini-polaroid" data-lightbox="assets/img/pistacho-chocolate.jpg" data-title="Chocolate 85% Cacao Vegan">
+                        <img src="assets/img/pistacho-chocolate.jpg" alt="Pistacho">
+                        <span>🌱 Choc. 85% &amp; Pistacho</span>
+                    </div>
+                    <div class="mini-polaroid" data-lightbox="assets/img/paletas.jpg" data-title="Paletas Sin Lactosa ni Gluten">
+                        <img src="assets/img/paletas.jpg" alt="Paletas">
+                        <span>🍭 Sin Gluten ni Lactosa</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Custom 1-Liter Compostable Tub Builder -->
+        <section class="builder-section" id="armar-pote">
+            <div class="container">
+                <div class="builder-card">
+                    <div class="builder-left">
+                        <span class="amatic-subtitle">Envase 100% Compostable ♻️</span>
+                        <h2 class="section-title">Armá tu Pote de Litro <span class="script-pop">con Amor</span></h2>
+                        <p class="builder-desc">
+                            Elegí hasta <strong>4 sabores conscientes o clásicos</strong> de nuestra pizarra del día. Todos incluyen conos barquillo artesanales (opción vegana sin cargo).
+                        </p>
+
+                        <div class="tub-visualizer">
+                            <div class="tub-header">
+                                <span>Sabores en tu Pote Eco-Kraft:</span>
+                                <strong id="selectedCountText">0 / 4 gustos</strong>
+                            </div>
+                            <div class="selected-pills" id="selectedPills">
+                                <span class="empty-pill-hint">👆 ¡Tocá los sabores de la derecha para llenar tu pote!</span>
+                            </div>
+                        </div>
+
+                        <div class="builder-footer">
+                            <div class="builder-price-box">
+                                <span>Pote 1 Litro Compostable + 3 Barquillos</span>
+                                <strong>$11.900</strong>
+                            </div>
+                            <button class="btn-tanu-primary" id="addCustomPintBtn" disabled>
+                                ¡Sumar Pote al Pedido! 🍨
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="builder-right">
+                        <h3 class="board-title">🌱 Pizarra Consciente &amp; Artesanal:</h3>
+                        <div class="flavor-chips-grid" id="flavorChipsGrid">
+                            <button class="flavor-chip" data-flavor="Chocolate 85% Cacao (🌱 Vegan / 🌾🚫)" style="--chip-bg:#F3E7E4; --chip-border:#8F250C;">
+                                <span class="scoop-emoji">🍫</span>
+                                <div>
+                                    <strong>Chocolate 85% Cacao</strong>
+                                    <small>🌱 Vegan • 🌾🚫 Sin Gluten</small>
+                                </div>
+                            </button>
+                            <button class="flavor-chip" data-flavor="Pistacho Siciliano Puro (🌱 Vegan / 🌾🚫)" style="--chip-bg:#ECF8E5; --chip-border:#59982F;">
+                                <span class="scoop-emoji">🥜</span>
+                                <div>
+                                    <strong>Pistacho Puro Tostado</strong>
+                                    <small>🌱 Vegan • 🥛🚫 Sin Lactosa</small>
+                                </div>
+                            </button>
+                            <button class="flavor-chip" data-flavor="Lúcuma 100% Natural (🌱 Vegan / 🌾🚫)" style="--chip-bg:#FFF4D6; --chip-border:#D97E18;">
+                                <span class="scoop-emoji">🍯</span>
+                                <div>
+                                    <strong>Lúcuma de la Fruta</strong>
+                                    <small>🌱 Vegan • 🌾🚫 Sin Gluten</small>
+                                </div>
+                            </button>
+                            <button class="flavor-chip" data-flavor="Limón Menta Jengibre (🌱 Vegan / Libre Alérgenos)" style="--chip-bg:#E2FBF5; --chip-border:#239B7E;">
+                                <span class="scoop-emoji">🍋</span>
+                                <div>
+                                    <strong>Limón Menta Jengibre</strong>
+                                    <small>🌱 Vegan • 100% Jugo Real</small>
+                                </div>
+                            </button>
+                            <button class="flavor-chip" data-flavor="Yoghurt con Mermelada de Mora Casera (🌾🚫)" style="--chip-bg:#FFE8EE; --chip-border:#C81E4E;">
+                                <span class="scoop-emoji">🍓</span>
+                                <div>
+                                    <strong>Yoghurt &amp; Mora Silvestre</strong>
+                                    <small>🌾🚫 Sin Gluten • Receta Propia</small>
+                                </div>
+                            </button>
+                            <button class="flavor-chip" data-flavor="Chocolate 100% Sin Azúcar (🍃 Con Stevia)" style="--chip-bg:#EFEBE9; --chip-border:#5D4037;">
+                                <span class="scoop-emoji">🍃</span>
+                                <div>
+                                    <strong>Choc. 100% Sin Azúcar</strong>
+                                    <small>🍃 Endulzado con Stevia</small>
+                                </div>
+                            </button>
+                            <button class="flavor-chip" data-flavor="Maracuyá & Mango al Agua (🌱 Vegan / 🌾🚫)" style="--chip-bg:#FFF8DC; --chip-border:#E69500;">
+                                <span class="scoop-emoji">🥭</span>
+                                <div>
+                                    <strong>Maracuyá &amp; Mango</strong>
+                                    <small>🌱 Vegan • 🥛🚫 Sin Lactosa</small>
+                                </div>
+                            </button>
+                            <button class="flavor-chip" data-flavor="Dulce de Leche con Amor Tradicional" style="--chip-bg:#FFF0DB; --chip-border:#B22902;">
+                                <span class="scoop-emoji">💖</span>
+                                <div>
+                                    <strong>Dulce de Leche con Amor</strong>
+                                    <small>🥛 Clásico Artesanal Veteado</small>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Story & Locations -->
+        <section class="shops-section" id="locales">
+            <div class="container">
+                <div class="heart-story-banner">
+                    <div class="heart-logo-spot">
+                        <img src="assets/img/logo.jpg" alt="Logo Helados con Amor">
+                    </div>
+                    <div class="heart-story-text">
+                        <span class="amatic-subtitle">Conócenos de cerca</span>
+                        <h2>Helados que cuidan de ti, hechos <span class="script-pop">con amor</span> 💖🌱</h2>
+                        <p>
+                            Combinamos la alegría del helado artesanal de toda la vida con una mirada consciente: agua purificada y ozonizada, frutas agroecológicas de pequeños productores y recetas propias libres de premezclas químicas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="locations-grid">
+                    <div class="shop-card shop-pink">
+                        <span class="shop-sticker">🏡 Casa Central &amp; Taller Consciente</span>
+                        <h3>Palermo Botánico</h3>
+                        <p>📍 Av. Las Heras 3840 (Frente al Jardín Botánico)</p>
+                        <p>🕒 Todos los días de 11:30 a 01:00 hs</p>
+                        <div class="shop-perks">🌱 Carta completa Vegana, Sin Azúcar y Clásica</div>
+                    </div>
+
+                    <div class="shop-card shop-green">
+                        <span class="shop-sticker">🌳 Terraza &amp; Barquillos al Momento</span>
+                        <h3>Villa Devoto</h3>
+                        <p>📍 Av. Chivilcoy 3920 (Plaza Arenales)</p>
+                        <p>🕒 Todos los días de 12:00 a 00:30 hs</p>
+                        <div class="shop-perks">🐶 Pet Friendly • Heladito de fruta para perritos</div>
+                    </div>
+
+                    <div class="shop-card shop-mango">
+                        <span class="shop-sticker">🛵 Delivery Propio Sustentable</span>
+                        <h3>Belgrano R</h3>
+                        <p>📍 Melián 2150 (Esquina Echeverría)</p>
+                        <p>🕒 Martes a Domingos de 12:00 a 00:00 hs</p>
+                        <div class="shop-perks">♻️ Envíos en potes compostables en 30 min</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Inspired by Tanu's Clean Warm Cream Footer + Brand Logo -->
+    <footer class="footer">
+        <div class="container footer-grid-tanu">
+            <div class="footer-col-logo">
+                <img src="assets/img/logo.jpg" alt="Logo Helados con Amor" class="footer-logo">
+                <h4 class="brand-script-footer">Helados con amor</h4>
+                <p>Heladería Artesanal, Colorida &amp; Consciente 🌱</p>
+            </div>
+            <div class="footer-col">
+                <h5>Conócenos</h5>
+                <ul>
+                    <li><a href="#pilares">Filosofía Súper Alimentos</a></li>
+                    <li><a href="#linea-vegan">Línea Vegana &amp; Sin Alérgenos</a></li>
+                    <li><a href="#locales">Locales y Delivery</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Nuestras Recetas</h5>
+                <ul>
+                    <li>🌱 Sin bases industriales</li>
+                    <li>🌾🚫 Opciones Libres de Gluten</li>
+                    <li>🍃 Alternativas con Stevia</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Hacé tu Pedido</h5>
+                <span class="whatsapp-pill">📱 +54 9 11 5555-AMOR</span>
+                <p>📸 Instagram: <strong>@heladosconamor</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal" aria-hidden="true">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">&times;</button>
+            <img src="" alt="" id="lightboxImg">
+            <p class="lightbox-caption" id="lightboxCaption"></p>
+        </div>
+    </div>
+
+    <!-- Slide-over Order Drawer -->
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+        <div class="cart-drawer-header">
+            <div class="drawer-title-group">
+                <img src="assets/img/logo.jpg" alt="Logo" class="drawer-mini-logo">
+                <h3>Tu Pedido Consciente 💖🌱</h3>
+            </div>
+            <button class="drawer-close" id="drawerClose" aria-label="Cerrar">&times;</button>
+        </div>
+        <div class="cart-items-container" id="cartItemsContainer">
+            <p class="empty-cart-msg">¡Todavía no elegiste tu sabor de hoy! Sumá tus favoritos de la carta 🍦🍓</p>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-total-row">
+                <span>Total del pedido:</span>
+                <strong id="cartTotalValue">$0</strong>
+            </div>
+            <button class="btn-tanu-primary btn-block" id="checkoutBtn">
+                Confirmar Pedido por WhatsApp 💬🍦
+            </button>
+        </div>
+    </aside>
+    <div class="backdrop" id="backdrop"></div>
+
+    <!-- Fun Toast Notification -->
+    <div class="toast" id="toast">¡Sumado a tu pedido con amor! 🍓🌱</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
